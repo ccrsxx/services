@@ -1,0 +1,11 @@
+services:
+  app:
+    image: lissy93/dashy:latest
+    environment:
+      - CONFIG_FILE
+    volumes:
+      - type: bind
+        source: ${CONFIG_FILE:-./config-example.yml}
+        target: /app/public/conf.yml
+    ports:
+      - 80:80
