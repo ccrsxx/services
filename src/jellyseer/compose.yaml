@@ -10,13 +10,5 @@ services:
     - jellyseerr_data:/app/config
     restart: unless-stopped
 
-  tunnel:
-    image: cloudflare/cloudflared:latest
-    restart: unless-stopped
-    command: tunnel run
-    env_file: ${ENV_FILE:-.env.development}
-    environment:
-      - TUNNEL_TOKEN
-
 volumes:
   jellyseerr_data:

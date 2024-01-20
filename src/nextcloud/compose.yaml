@@ -15,14 +15,6 @@ services:
       - APACHE_IP_BINDING=0.0.0.0
       - NEXTCLOUD_DATADIR=/run/desktop/mnt/host/d/ncdata
 
-  tunnel:
-    image: cloudflare/cloudflared:latest
-    restart: unless-stopped
-    command: tunnel run
-    env_file: ${ENV_FILE:-.env.development}
-    environment:
-      - TUNNEL_TOKEN
-
 volumes:
   nextcloud_aio_mastercontainer:
     name: nextcloud_aio_mastercontainer
