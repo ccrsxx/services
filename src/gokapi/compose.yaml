@@ -1,6 +1,7 @@
 services:
   app:
     image: f0rc3/gokapi:latest
+    restart: unless-stopped
     ports:
       - 53842:53842
     volumes:

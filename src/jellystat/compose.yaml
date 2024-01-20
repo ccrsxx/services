@@ -1,6 +1,7 @@
 services:
   jellystat-db:
     image: postgres:15.2
+    restart: unless-stopped
     env_file: ${ENV_FILE:-.env.development}
     environment:
       - POSTGRES_DB
@@ -11,6 +12,7 @@ services:
 
   jellystat:
     image: cyfershepard/jellystat:latest
+    restart: unless-stopped
     env_file: ${ENV_FILE:-.env.development}
     environment:
       - POSTGRES_USER

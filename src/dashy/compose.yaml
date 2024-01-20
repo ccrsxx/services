@@ -1,6 +1,7 @@
 services:
   app:
     image: lissy93/dashy:latest
+    restart: unless-stopped
     environment:
       - CONFIG_FILE
     volumes:
