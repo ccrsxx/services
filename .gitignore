@@ -1,6 +1,7 @@
 # Sensitive data
 .env
 config.yml
+**/config
 
 
 # Temporary directory
