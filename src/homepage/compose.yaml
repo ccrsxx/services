@@ -1,5 +1,5 @@
 services:
-  homepage:
+  app:
     image: ghcr.io/gethomepage/homepage:latest
     restart: unless-stopped
     ports:
