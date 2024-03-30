@@ -1,8 +1,9 @@
 # Sensitive data
 .env
+.grafana
+.prometheus
 config.yml
 **/config
-
 
 # Temporary directory
 **/temp/
