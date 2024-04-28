@@ -2,7 +2,8 @@ import os
 import subprocess
 
 IGNORE_SERVICES_UPDATE = [
-    'nextcloud'
+    'nextcloud',
+    'cloudflared'
 ]
 
 def main() -> None:
